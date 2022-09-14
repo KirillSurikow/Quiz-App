@@ -48,3 +48,26 @@ body{
     margin-bottom: 12px;
 
    }
+
+   .welcomeText{
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   }
+
+   .startImg{
+
+     width: 100%;
+     height: 100%;
+
+   }
+
+   .welcomeText span{
+
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+
+   }

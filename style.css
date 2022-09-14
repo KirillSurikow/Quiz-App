@@ -1,16 +1,50 @@
 body{
 
  margin: 0% !important;
- background-color: rgb(56, 56, 214) !important;
+ background-color: rgba(0,0,0,0.4) !important;
 
 }
 
 .cardContainer{
 
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   }
+   
+   .blueBackground{
+   
+     background-color:rgb(56, 56, 214) ;
+   
+   }
 
-}
+   .centered{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+   .rubikRegular{
+
+    font-family: 'Rubik',sans-serif;
+
+   }
+
+   .white{
+
+    color: whitesmoke;
+
+   }
+
+   .margin{
+
+    margin-top: 12px;
+    margin-bottom: 12px;
+
+   }

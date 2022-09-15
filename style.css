@@ -82,7 +82,7 @@ body{
    .welcomeText{
 
     position: relative;
-    bottom: 250px;
+    right: 61%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,6 +93,8 @@ body{
 
      width: 100%;
      height: 100%;
+     position: relative;
+     left: 45%;
 
    }
 
@@ -113,6 +115,9 @@ body{
 
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 
    }
@@ -217,44 +222,294 @@ body{
     }
 
     .fontSize{
-
         font-size: 20px;
-
     }
     
     
     .sideMargin{
-
         margin-right: 30px;
-
     }
 
     .orangeBackground{
-
       background-color: rgb(255,78,15);
       margin-top: 16px;
       margin-bottom: 15px;
-
     }
 
     .btnDesignShare{
-
         width: 32%;
         height: 32px;
         border: none;
         border-radius: 6px;
-
     }
 
     .btnDesignReplay{
-
         border: none;
         background-color: transparent;
-
     }
 
     .d-none{
+       display: none;
+    }
 
-     display: none;
+    .replayBtn{
+        border: none;
+        background-color: transparent;
+    }
+
+    .text1{
+
+        width: 100px;
+   
+        }
+   
+        .text2{
+   
+        width: 200px;
+   
+        }
+   
+        .text3{
+   
+         margin-top: 26px;
+   
+        }
+
+    @media (max-width:992px){
+
+     .card{
+
+        flex-direction: column !important;
+        height: 90%;
+        width: 100% !important;
+     }
+
+     .col-md4{
+
+        width: 100% !important;
+     }
+
+    
+
+     .col-md-8{
+ 
+        width: 100% !important;
+        height: 80% !important;
+      }
+
+     .row-g-0{
+
+        flex-wrap: nowrap;
+        flex-direction: column;
+     }
+
+     .centered{
+        justify-content: space-evenly;
+        flex-direction: row;
+     }
+
+     .row{
+
+      height: 100%;
+
+     }
+
+     .startImg{
+
+        left: 20%;
+
+     }
+
+     .welcomeText{
+
+        right: 31%;
+
+     }
+
+     .text1{
+
+     width: 100px;
+
+     }
+
+     .text2{
+
+     width: 200px;
+
+     }
+
+     .text3{
+
+      margin-top: 26px;
+
+     }
+
 
     }
+
+    @media (max-width:880px){
+
+        .welcomeText{
+
+            right: 35%;
+    
+         }
+
+
+    }
+
+    @media (max-width:835px){
+
+        .welcomeText{
+
+            right: 40%;
+    
+         }
+
+
+    }
+
+    @media (max-width:770px){
+
+        .welcomeText{
+
+            right: 45%;
+    
+         }
+
+
+    }
+
+    @media (max-width:770px){
+
+        .welcomeText{
+
+            right: 45%;
+    
+         }
+
+
+    }
+
+    @media (max-width:660px){
+
+        .welcomeText{
+
+            right: 50%;
+    
+         }
+
+
+    }
+
+    @media (max-width:660px){
+
+        .welcomeText{
+
+            right: 50%;
+    
+         }
+
+
+    }
+
+    @media (max-width:580px){
+
+        .welcomeText{
+
+            right: 55%;
+    
+         }
+
+
+    }
+
+    @media (max-width:580px){
+
+        .welcomeText{
+
+            right: 55%;
+    
+         }
+
+
+    }
+
+    @media (max-width:540px){
+
+        .welcomeText{
+
+            right: 60%;
+    
+         }
+
+
+    }
+
+    @media (max-width:460px){
+
+        .welcomeText{
+
+            right: 42%;
+    
+         }
+
+         .startImg{
+
+            left: 47%;
+
+         }
+
+        h2{
+
+         font-size: 18px;
+
+        }
+
+        .card-body{
+
+        font-size: 12px;
+
+        }
+
+        .anserWidth{
+
+          font-size: 12px;
+
+        }
+
+        .btnDesignShare{
+
+            width: 40%;
+
+        }
+
+
+
+
+    }
+
+    @media (max-width:400px){
+
+        .welcomeText{
+
+            right: 49%;
+    
+         }
+
+
+    }
+
+    @media (max-width:375px){
+
+        .welcomeText{
+
+            right: 53%;
+    
+         }
+
+
+    }
+
+
+  

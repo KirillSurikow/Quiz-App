@@ -69,12 +69,10 @@ let currentQuestion = 0;
 let rightAnswerCount = 0;
 
 function init() {
-
     showQuiz();
     showQuestion();
     showAnswers();
     showProgress();
-
 }
 
 function showQuiz() {
@@ -115,16 +113,18 @@ function showProgress() {
 
 function showNextQuestion() {
     currentQuestion++;
-    if( currentQuestion == questions.length){
-     showEndScreen();
-    }else{
+    if (currentQuestion == questions.length) {
+        showEndScreen();
+        updateProgressBar();
+    } else {
         resetAnswers();
         showQuestion();
         showAnswers();
         showProgress();
         disableNextbtn();
+        updateProgressBar();
     }
-    
+
 
 }
 
@@ -133,6 +133,7 @@ function answer(selectedAnswer) {
     let rightAnswer = questions[currentQuestion]['rightAnswer'];
     if (selectedAnswer == rightAnswer) {
         success(selectedAnswer);
+        rightAnswerCount++;
     } else {
         fail(selectedAnswer, rightAnswer);
     }
@@ -168,26 +169,43 @@ function disableNextbtn() {
     document.getElementById('nextBtn').disabled = true;
 }
 
-function showEndScreen(){
-
+function showEndScreen() {
     document.getElementById('quizContainer').classList.add('d-none');
-  
+    document.getElementById('endScreen').classList.remove('d-none');
+    showResult();
+}
 
+function showResult() {
+    document.getElementById('questionAmount').innerHTML = questions.length;
+    document.getElementById('rightAnswers').innerHTML = rightAnswerCount;
 }
 
 
+function replay() {
+    currentQuestion = 0;
+    rightAnswerCount = 0;
+    closeEndScreenShowQuiz()
+    showQuestion();
+    showAnswers();
+    resetAnswers();
+    showProgress();
+    updateProgressBar();
+}
 
+function closeEndScreenShowQuiz() {
+    document.getElementById('endScreen').classList.add('d-none');
+    document.getElementById('quizContainer').classList.remove('d-none');
+}
 
+function updateProgressBar() {
+    let progress = determineProgress();
+    let progressBar = document.getElementById('progressBar');
+    progressBar.style =`width:${progress}`;
+    progressBar.innerHTML = progress;
+}
 
+function determineProgress(){
 
-
-
-
-// function replay() {
-
-//     currentQuestion = 0;
-//     showQuestion();
-//     showAnswers();
-
-
-// }
+  let progress = (currentQuestion / questions.length)*100;
+  return progress = Math.round(progress)+'%';
+}
